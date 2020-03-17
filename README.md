@@ -2,7 +2,7 @@
 ```bash
 cd existing_folder
 git init
-git remote add origin https://gitlab.com/lostWinter64/sft-webpage.git
+git remote add origin https://github.com/nnekaen/interim-site.git
 git add .
 git commit -m "Initial commit"
 git push -u origin master
@@ -11,7 +11,7 @@ git push -u origin master
 ```bash
 cd existing_repo
 git remote rename origin old-origin
-git remote add origin https://gitlab.com/lostWinter64/sft-webpage.git
+git remote add origin https://github.com/nnekaen/interim-site.git
 git push -u origin --all
 git push -u origin --tags
 ```
