@@ -1,0 +1,52 @@
+{
+    "team": [{
+        "imgsrc": "../images/brian.jpg",
+        "firstname": "Brian",
+        "lastname": "Iselin",
+        "title": "Chief Executive Officer ",
+        "background": "",
+        "mail": "brian.iselin@slavefreetrade.org"
+    }, {
+        "imgsrc": "../images/david.jpg",
+        "firstname": "David",
+        "lastname": "Badower",
+        "title": "Chief Operating Officer ",
+        "background": "",
+        "mail": "david.badower@slavefreetrade.org"
+    }, {
+        "imgsrc": "../images/marco.jpg",
+        "firstname": "Marco",
+        "lastname": "Colacchia",
+        "title": "Chief Finance Officer (Volunteer)",
+        "background": "",
+        "mail": "marco.colacchia@slavefreetrade.org"
+    }, {
+        "imgsrc": "../images/Martina.JPG",
+        "firstname": "Martina",
+        "lastname": "Carlino",
+        "title": "Director, Assessment & Monitoring",
+        "background": "",
+        "mail": "martina.carlino@slavefreetrade.org"
+    }, {
+        "imgsrc": "../images/Raffaele.jpg",
+        "firstname": "Raffaele ",
+        "lastname": "de Cecco",
+        "title": "Chief of Supply Chain",
+        "background": "",
+        "mail": "raffaele.dececco@slavefreetrade.org"
+    }, {
+        "imgsrc": "../images/sumati.jpg",
+        "firstname": "Sumati",
+        "lastname": "Mattu",
+        "title": "Chief Marketing Officer",
+        "background": "",
+        "mail": "sumati.mattu@slavefreetrade.org"
+    }, {
+        "imgsrc": "../images/albert.jpg",
+        "firstname": "Albert",
+        "lastname": "Peci",
+        "title": "Director of Blockchain Services",
+        "background": "",
+        "mail": "albert.peci@slavefreetrade.org"
+    }]
+}

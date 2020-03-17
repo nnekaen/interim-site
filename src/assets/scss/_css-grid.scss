@@ -1,0 +1,150 @@
+/* CSS Grid */
+
+@media screen and (min-width: 981px) {
+
+    .grid-wrapper {
+        display: grid;
+        grid-gap: 0 2.25em;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0 auto;
+        width: 90%;
+       
+    }
+
+
+    /* Generate Columns 1 through 12 */
+    /*
+		Example:
+		.col-6 { grid-column: span 6; }
+	*/
+
+    $columns: 12;
+
+    @mixin col-x-list {
+        @for $i from 1 through $columns {
+            .col-#{$i} {
+                grid-column: span #{$i}
+            }
+        }
+    }
+
+    @include col-x-list;
+
+}
+
+@media screen and (min-width: 1141px) {
+
+    .grid-wrapper {
+        grid-gap: 0 3em;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:1024px) {
+
+    .image.logo {
+        width: 100% !important;
+        margin:0px !important;
+        list-style: none !important;
+        text-align: center;
+        margin: 0.4em;
+    }
+    .para-box {
+    height: 100% !important;
+    margin: 30px auto;
+    }
+    #header
+    {
+    padding: 0.4em 0 30em !important;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+         padding: 0.4em 0 30em !important;
+        h3 {
+            position: relative;
+            display: grid;
+            font-size: 1.5em;
+            text-align: center;
+        }
+    }
+    
+}
+
+@media screen and (max-width:738px) {
+
+    .image.logo {
+        width: 100% !important;
+        margin:0px !important;
+        list-style: none !important;
+        
+    }
+    .blockquote {
+        h3 {
+    font-size: 12px !important;
+    }
+    }
+    .desc{
+        margin-top:-100px;
+    }
+    .quote {
+    height: 100% !important;
+    margin-top: -90px;
+    }
+    .desc{
+        margin-top:0px
+    }
+    .column-fourth{
+    order: 4;
+    }
+    .column-first{
+        order: 1; 
+    }
+    .column-second{
+   order: 3; 
+    }
+    .column-third{
+        order: 2; 
+    }
+    
+    .para-box {
+    height: 100% !important;
+    margin: 30px auto;
+    }
+    #header
+    {
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+    padding: 0.4em 0 30em !important;
+    width: 100%;
+    background-repeat: no-repeat;
+
+        h3 {
+            margin-left: 0px;
+            position: relative;
+            display: grid;
+            font-size: 1.5em;
+            text-align: center;
+            margin-top:0px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1700px) {
+
+    .teams-grid {
+        width: 140px !important;
+        height: 140px !important;
+        margin:0px;
+    }
+    .team-description {
+    font-size: 13px !important;
+}
+}
+

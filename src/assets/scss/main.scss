@@ -1,0 +1,710 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import "libs/skel";
+@import url('../css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+
+@import "css-grid";
+/*
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+@include skel-breakpoints((xlarge: '(max-width: 1680px)',
+        large: '(max-width: 1280px)',
+        medium: '(max-width: 980px)',
+        small: '(max-width: 736px)',
+        xsmall: '(max-width: 480px)',
+        xxsmall: '(max-width: 360px)'
+    ));
+
+@include skel-layout((reset: 'full',
+        boxModel: 'border'
+    ));
+
+@import url('components/_header.scss');
+@import url('components/_footer.scss');
+@import url('components/_section.scss');
+
+/* ======= BASIC ======= */
+html{
+    scroll-behavior: smooth;
+
+}
+body {
+    background: _palette(bg);
+    width: 100%;
+
+    .body.is-loading {
+
+        *,
+        *:before,
+        *:after {
+            @include vendor('animation', 'none !important');
+            @include vendor('transition', 'none !important');
+        }
+    }
+}
+
+
+body,
+input,
+select,
+textarea {
+    color: _palette(fg);
+    font-family: _font(family);
+    font-size: 14pt;
+    font-weight: _font(weight-light);
+    line-height: 1.65em;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/headers1.jpg");
+
+    /* Set a specific height */
+    height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../images/callout.jpg");
+
+    /* Set a specific height */
+    height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url("../images/quote.jpg");
+    /* Set a specific height */
+    height: 450px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.firstpara{
+    color: #fff;
+    line-height: 200%;
+    box-shadow: 10px 0 0 #2CAAE2, -10px 0 0 #2CAAE2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2CAAE2;
+   margin: auto;
+    width: 100%;
+
+
+}
+.secondpara{
+    color: #fff;
+    background-color: #1A4074;
+    line-height: 200%;
+    box-shadow: 10px 0 0 #1A4074, -10px 0 0 #1A4074;
+    padding-top: 10px;
+    padding-bottom: 10px;
+     margin: auto;
+    width: 70%;
+}
+.text-right{
+    color: #fff;
+    background-color: #1A4074;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+
+}
+.quote-title{
+    text-align: right;
+    display: flex;
+    left: 70%;
+    top: 10%;
+    width: 30%;
+    position: relative;
+
+}
+.quote-box{
+    margin: auto;
+    padding: 50px;
+    top: 20%;
+    left: 0%;
+    margin-top: 50px;
+    position: relative;
+    display: table;
+
+}
+
+a {
+    @include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
+    border-bottom: dotted 1px _palette(fg);
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom-color: transparent !important;
+        color: _palette(accent3);
+    }
+}
+
+strong,
+b {
+    color: _palette(fg-bold);
+    font-weight: _font(weight-bold);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p {
+    margin: 0 0 _size(element-margin) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: _palette(heading);
+    line-height: 1em;
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 2.25em;
+    line-height: 1.35em;
+}
+
+.about-heading {
+    text-align: center;
+}
+
+.sub-heading {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.35em;
+}
+
+h3 {
+    font-size: 1.35em;
+    line-height: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+h5 {
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+h6 {
+    font-size: 0.7em;
+    line-height: 1.5em;
+}
+
+sub {
+    font-size: 0.8em;
+    position: relative;
+    top: 0.5em;
+}
+
+sup {
+    font-size: 0.8em;
+    position: relative;
+    top: -0.5em;
+}
+
+hr {
+    border: 0;
+    border-bottom: solid 1px _palette(border);
+
+    // This is the *only* instance where we need to rely on margin collapse.
+    margin: _size(element-margin) 0;
+
+    &.major {
+        margin: (_size(element-margin) * 1.5) 0;
+    }
+}
+
+
+code {
+    background: _palette(border-bg);
+    border-radius: _size(border-radius);
+    border: solid 1px _palette(border);
+    font-family: _font(family-fixed);
+    font-size: 0.9em;
+    margin: 0 0.25em;
+    padding: 0.25em 0.65em;
+}
+
+pre {
+    -webkit-overflow-scrolling: touch;
+    font-family: _font(family-fixed);
+    font-size: 0.9em;
+    margin: 0 0 _size(element-margin) 0;
+
+    code {
+        display: block;
+        line-height: 1.75em;
+        padding: 1em 1.5em;
+        overflow-x: auto;
+    }
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* ======= MAIN ======= */
+
+.main {
+
+    @include padding(4em, 0);
+
+    &.style1 {
+        background: _palette(bg);
+        padding: 30px 10% 0 10%;
+        color: black;
+        margin: auto;
+        text-align: center;
+    }
+
+    &.style3 {
+        background: _palette(accent3);
+        background-attachment: fixed;
+        background-position: top left, center center, center center;
+        background-size: cover;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 100%;
+        padding: 20px 10% 0 10%;
+        color: black;
+        line-height: 27px;
+    }
+
+    &.style2 {
+        @include dark(#333);
+        background-attachment: relative, relative;
+        background-image: url('../images/headers.jpg');
+        background-size: auto, cover;
+        padding: 20px 10% 0 10%;
+    }
+}
+
+/* XLarge */
+
+@include breakpoint(xlarge) {
+
+    /* Basic */
+
+    body,
+    input,
+    select,
+    textarea {
+        font-size: 14pt;
+    }
+
+    /* Header */
+
+    #header {
+        @padding: 0 0 30em;
+    }
+
+}
+
+/* Large */
+
+@include breakpoint(large) {
+
+    /* Basic */
+
+    body,
+    input,
+    select,
+    textarea {
+        font-size: 13pt;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        br {
+            display: none;
+        }
+    }
+
+    /* List */
+
+    ul {
+        &.major-icons {
+            li {
+                padding: 2em;
+
+                .icon {
+                    height: 8em;
+                    line-height: 8em;
+                    width: 8em;
+                }
+            }
+        }
+    }
+
+    /* Main */
+
+    .main {
+        @include padding(4em, 0);
+
+        &.style2 {
+            background-attachment: scroll;
+        }
+    }
+
+    /* Header */
+
+    #header {
+        padding: 0 0 30em;
+        background-attachment: scroll;
+
+        br {
+            display: inline;
+        }
+    }
+
+    /* Footer */
+
+    #footer {
+        @include padding(4em, 0, (0, 0, _size(element-margin), 0));
+        background-attachment: scroll;
+    }
+
+}
+
+/* Medium */
+
+@include breakpoint(medium) {
+
+    .main {
+
+        @include padding(4em, 0);
+
+        &.style1 {
+            padding: 30px 10% 0 10%;
+        }
+
+        &.style3 {
+            padding: 20px 10% 0 10%;
+        }
+
+        &.style2 {
+            @include dark(#333);
+            padding: 20px 10% 0 10%;
+        }
+    }
+
+    /* List */
+
+    ul {
+        &.major-icons {
+            li {
+                padding: 2em;
+
+                .icon {
+                    height: 7em;
+                    line-height: 7em;
+                    width: 7em;
+                }
+            }
+        }
+    }
+
+    /* Main */
+
+    .main {
+        @include padding(5em, 3em);
+    }
+
+    /* Header */
+
+    #header {
+        padding: 0 0 30em;
+    }
+    
+
+    /* Footer */
+
+    #footer {
+        @include padding(5em, 3em, (0, 0, _size(element-margin), 0));
+    }
+
+    /* One */
+
+    #one {
+        text-align: center;
+    }
+
+    /* Valuesalign */
+
+    #Valuesalign {
+        text-align: center;
+        background: whitesmoke;
+    }
+
+    #about {
+        text-align: center;
+        background: whitesmoke;
+    }
+}
+
+/* Small */
+
+@include breakpoint(small) {
+
+    /* Basic */
+
+    body,
+    input,
+    select,
+    textarea {
+        font-size: 12pt;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    /* List */
+
+    ul {
+        &.major-icons {
+            li {
+                padding: 1.5em;
+
+                .icon {
+                    height: 5em;
+                    line-height: 5em;
+                    width: 5em;
+
+                    &:before {
+                        font-size: 42px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Icon */
+
+    .icon {
+        &.major {
+            margin: 0 0 (_size(element-margin) * 0.5) 0;
+        }
+    }
+
+    /* Button */
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+        height: 3em;
+        line-height: 3em;
+    }
+   
+    /* Main */
+
+    .main {
+        @include padding(3em, 1.5em);
+    }
+
+    /* Header */
+
+    #header {
+        padding: 0 0 30em;
+    
+
+        .actions {
+            margin: _size(element-margin) 0 0 0;
+        }
+    }
+
+    /* Footer */
+
+    #footer {
+        @include padding(3em, 1.5em, (0, 0, _size(element-margin), 0));
+    }
+
+}
+
+/* XSmall */
+
+@include breakpoint(xsmall) {
+
+    /* List */
+
+    ul {
+        &.actions {
+            margin: 0 0 _size(element-margin) 0;
+
+            li {
+                display: block;
+                padding: (_size(element-margin) * 0.5) 0 0 0;
+                text-align: center;
+                width: 100%;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                >* {
+                    margin: 0 !important;
+                    width: 100%;
+
+                    &.icon {
+                        &:before {
+                            margin-left: -2em;
+                        }
+                    }
+                }
+            }
+
+            &.small {
+                li {
+                    padding: (_size(element-margin) * 0.25) 0 0 0;
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Button */
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    .button {
+        padding: 0;
+    }
+
+    /* Main */
+
+    .main {
+        @include padding(2em, 1.5em);
+    }
+
+    /* Header */
+
+    #header {
+       padding: 0 0 30em;
+
+        br {
+            display: none;
+        }
+    }
+
+    /* Footer */
+
+    #footer {
+        @include padding(2em, 1.5em, (0, 0, _size(element-margin), 0));
+
+        .copyright {
+            margin: (_size(element-margin) * 0.75) 0 0 0;
+
+            li {
+                border: 0;
+                display: block;
+                margin: 1em 0 0 0;
+                padding: 0;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+}
+
+/* XXSmall */
+
+@include breakpoint(xxsmall) {
+
+    /* Basic */
+
+    html,
+    body {
+        min-width: 320px;
+    }
+
+    /* Main */
+
+    .main {
+        @include padding(2em, 1em);
+    }
+
+    /* Header */
+
+    #header {
+        padding: 0 0 30em;
+    }
+
+    /* Footer */
+
+    #footer {
+        @include padding(2em, 1em, (0, 0, _size(element-margin), 0));
+    }
+
+}

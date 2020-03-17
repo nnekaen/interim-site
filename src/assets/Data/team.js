@@ -1,0 +1,42 @@
+const team = [
+  {
+    imgsrc: '../images/user.png',
+    firstname: 'Brian',
+    lastname: 'Iselin',
+    title: 'CEO',
+    background: 'LOREM IPSUM',
+    mail: 'brian.iselin@slavefreetrade.org',
+  },
+  {
+    imgsrc: '../images/user.png',
+    firstname: 'Brian2',
+    lastname: 'Iselin2',
+    title: 'CEO2',
+    background: 'LOREM IPSUM2',
+    mail: 'brian.iselin@slavefreetrade.org',
+  },
+  {
+    imgsrc: '../images/user.png',
+    firstname: 'Brian3',
+    lastname: 'Iselin3',
+    title: 'CEO2',
+    background: 'LOREM IPSUM3',
+    mail: 'brian.iselin@slavefreetrade.org',
+  },
+  {
+    imgsrc: '../images/user.png',
+    firstname: 'Brian4',
+    lastname: 'Iselin4',
+    title: 'CEO2',
+    background: 'LOREM IPSUM4',
+    mail: 'brian.iselin@slavefreetrade.org',
+  },
+  {
+    imgsrc: '../images/user.png',
+    firstname: 'Brian6',
+    lastname: 'Iselin6',
+    title: 'CEO2',
+    background: 'LOREM IPSUM6',
+    mail: 'brian.iselin@slavefreetrade.org',
+  },
+]
